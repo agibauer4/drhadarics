@@ -8,10 +8,14 @@ export const contact = {
   linkedin: 'https://www.linkedin.com/in/d%C3%B3ra-dr-hadarics-57a8bb29b/',
 }
 
+// Links to sections on the home page; BASE_URL keeps them working when the
+// site is served from a subfolder (e.g. the GitHub Pages staging build).
+export const homeLink = (id: string) => `${import.meta.env.BASE_URL}#${id}`
+
 export const navLinks = [
-  { label: 'Szakterületek', href: '/#expertise' },
-  { label: 'Online konzultáció', href: '/#consultation' },
-  { label: 'Bemutatkozás', href: '/#intro' },
+  { label: 'Szakterületek', href: homeLink('expertise') },
+  { label: 'Online konzultáció', href: homeLink('consultation') },
+  { label: 'Bemutatkozás', href: homeLink('intro') },
 ]
 
 export const expertise = [

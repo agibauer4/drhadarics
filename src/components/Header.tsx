@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import Logo from '../assets/logo-horizontal.svg?react'
-import { navLinks } from '../content/site'
+import { homeLink, navLinks } from '../content/site'
 import Button from './Button'
 
 export default function Header() {
@@ -23,7 +23,7 @@ export default function Header() {
             </a>
           ))}
         </nav>
-        <Button href="/#contact" tone="light" className="header__cta">
+        <Button href={homeLink('contact')} tone="light" className="header__cta">
           Kapcsolat
         </Button>
         <button
@@ -43,7 +43,7 @@ export default function Header() {
             {l.label}
           </a>
         ))}
-        <a href="/#contact" onClick={() => setOpen(false)}>
+        <a href={homeLink('contact')} onClick={() => setOpen(false)}>
           Kapcsolat
         </a>
       </nav>

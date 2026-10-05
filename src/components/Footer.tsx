@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import Logo from '../assets/logo-horizontal.svg?react'
-import { contact } from '../content/site'
+import { contact, homeLink } from '../content/site'
 import { openCookieSettings } from './CookieBanner'
 import { Heart, LinkedIn } from './Icons'
 
@@ -18,12 +18,12 @@ export default function Footer() {
 
       <div className="footer__links">
         <div>
-          <a href="/#expertise">Szakterületek</a>
-          <a href="/#intro">Bemutatkozás</a>
+          <a href={homeLink('expertise')}>Szakterületek</a>
+          <a href={homeLink('intro')}>Bemutatkozás</a>
         </div>
         <div>
-          <a href="/#consultation">Online konzultáció</a>
-          <a href="/#contact">Kapcsolat</a>
+          <a href={homeLink('consultation')}>Online konzultáció</a>
+          <a href={homeLink('contact')}>Kapcsolat</a>
         </div>
         <div>
           <Link to="/adatkezelesi-tajekoztato">Adatvédelmi tájékoztató</Link>
